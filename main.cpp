@@ -12,7 +12,7 @@ int main() {
             cout << "Introduzca el valor de b, siendo este el segundo lado del triangulo: "; // Introducimos el valor de b
             cin >> b; // Leemos el valor de b
 
-            int c = sqrt((a^2) + (b^2)); // Calculamos el valor de c
+            double c = sqrt((a^2) + (b^2)); // Calculamos el valor de c
 
             if ( c == floor(c) && a + b > c) {
                 cout << "El triangulo cumple que a + b > c" << endl;
@@ -22,15 +22,12 @@ int main() {
             }
 
 
-            if ( c == floor((a^2) + (b^2))) {
-                cout << "Y los tres lados forman un triangulo pitagorico" << endl;
-                cout << "El valor de c es: " << c << endl;
+            if ( c == floor(c) && ((a^2) + (b^2)) > c) {
+                std::cout << "Los tres lados foman un triangulo pitagorico" << endl;
             }
             else {
-                cout << "Y los tres lados no forman un triangulo pitagorico" << endl;
+                std::cout << "Y los tres lados no forman un triangulo pitagorico" << endl;
             }
-
-
 
             return 0;
         }
